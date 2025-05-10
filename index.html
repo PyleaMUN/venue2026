@@ -1,41 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venues</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        img {
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #333;
-        }
-        p {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PyleaMUN Venues</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #006d7a;
+      --cream: #f8f5ec;
+      --nav-bg: #f8f8f0;
+    }
+    body {
+      margin: 0;
+      padding-top: 56px; /* για fixed navbar */
+      font-family: 'Lato', sans-serif;
+      background-color: var(--cream);
+      color: #333;
+    }
+    .navbar-custom {
+      background-color: var(--nav-bg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    header img {
+      max-width: 200px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+    .venues-list {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
+    }
+    .venue-item {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: box-shadow 0.3s;
+    }
+    .venue-item:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .venue-item h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: var(--teal);
+    }
+    .venue-item p {
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 <body>
-    <img src="pyleaMUNfinallogo.png" alt="pylea MUN Logo">
-    <h1>Venues</h1>
-    <p>to be anounced...</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="https://pyleamun.github.io/pyleamun2026/">
+        <img src="pyleaMUNfinallogo1.png" alt="PyleaMUN Logo" style="height:40px;" class="me-2">
+        PyleaMUN
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/pyleamun2026/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/study-guides2026/">Study Guides</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Venues</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/people2026/">The People</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/registration2026/">Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/resources2026/">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header>
+      <img src="pyleaMUNfinallogo.png" alt="PyleaMUN Logo">
+      <h1>Our Venues</h1>
+      <p class="text-muted">Coming soon — stay tuned!</p>
+    </header>
+
+    <div class="venues-list">
+      <!-- Παράδειγμα venue -->
+      <div class="venue-item">
+        <h2>1st Middle School of Pylea</h2>
+        <p>Address: Isminis 4, 55535, Thessaloniki, Greece</p>
+        <p>Capacity: 400 delegates</p>
+      </div>
+      <div class="venue-item">
+        <h2>Conference Hall</h2>
+        <p>Address:(to be announced, Thessaloniki, Greece</p>
+        <p>Capacity: 400 participants</p>
+      </div>
+      <!-- Πρόσθεσε κι άλλα venues εδώ -->
+    </div>
+  </div>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
